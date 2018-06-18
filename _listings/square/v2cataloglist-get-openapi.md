@@ -3,7 +3,7 @@ swagger: "2.0"
 x-collection-name: Square
 x-complete: 0
 info:
-  title: Square Connect API Get V2 Catalog List
+  title: Square Connect API ListCatalog
   description: |-
     Returns a list of [CatalogObject](#type-catalogobject)s that includes
     all objects of a set of desired types (for example, all [CatalogItem](#type-catalogitem)
@@ -15,9 +15,9 @@ info:
     name: Square Developer Platform
     url: https://squareup.com/developers
     email: developers@squareup.com
-  version: 1.0.0
+  version: "2.0"
 host: connect.squareup.com
-basePath: v1/
+basePath: /
 schemes:
 - http
 produces:
@@ -27,7 +27,7 @@ consumes:
 paths:
   /v2/catalog/batch-delete:
     post:
-      summary: Post V2 Catalog Batch Delete
+      summary: BatchDeleteCatalogObjects
       description: |-
         Deletes a set of [CatalogItem](#type-catalogitem)s based on the
         provided list of target IDs and returns a set of successfully deleted IDs in
@@ -39,7 +39,7 @@ paths:
         `BatchDeleteCatalogObjects` succeeds even if only a portion of the targeted
         IDs can be deleted. The response will only include IDs that were
         actually deleted.
-      operationId: postV2CatalogBatchDelete
+      operationId: BatchDeleteCatalogObjects
       x-api-path-slug: v2catalogbatchdelete-post
       parameters:
       - in: body
@@ -51,11 +51,10 @@ paths:
         200:
           description: OK
       tags:
-      - Catalog
-      - Batch-delete
+      - BatchCatalogObjects
   /v2/catalog/batch-retrieve:
     post:
-      summary: Post V2 Catalog Batch Retrieve
+      summary: BatchRetrieveCatalogObjects
       description: |-
         Returns a set of objects based on the provided ID.
         Each [CatalogItem](#type-catalogitem) returned in the set includes all of its
@@ -63,7 +62,7 @@ paths:
         [CatalogItemVariation](#type-catalogitemvariation) objects, references to
         its [CatalogModifierList](#type-catalogmodifierlist) objects, and the ids of
         any [CatalogTax](#type-catalogtax) objects that apply to it.
-      operationId: postV2CatalogBatchRetrieve
+      operationId: BatchRetrieveCatalogObjects
       x-api-path-slug: v2catalogbatchretrieve-post
       parameters:
       - in: body
@@ -75,11 +74,10 @@ paths:
         200:
           description: OK
       tags:
-      - Catalog
-      - Batch-retrieve
+      - BatchRetrieveCatalogObjects
   /v2/catalog/batch-upsert:
     post:
-      summary: Post V2 Catalog Batch Upsert
+      summary: BatchUpsertCatalogObjects
       description: |-
         Creates or updates up to 10,000 target objects based on the provided
         list of objects. The target objects are grouped into batches and each batch is
@@ -90,7 +88,7 @@ paths:
         batches will be processed in order as long as the total object count for the
         request (items, variations, modifier lists, discounts, and taxes) is no more
         than 10,000.
-      operationId: postV2CatalogBatchUpsert
+      operationId: BatchUpsertCatalogObjects
       x-api-path-slug: v2catalogbatchupsert-post
       parameters:
       - in: body
@@ -102,32 +100,30 @@ paths:
         200:
           description: OK
       tags:
-      - Catalog
-      - Batch-upsert
+      - BatchUpsertCatalogObjects
   /v2/catalog/info:
     get:
-      summary: Get V2 Catalog Info
+      summary: CatalogInfo
       description: |-
         Returns information about the Square Catalog API, such as batch size
         limits for `BatchUpsertCatalogObjects`.
-      operationId: getV2CatalogInfo
+      operationId: CatalogInfo
       x-api-path-slug: v2cataloginfo-get
       responses:
         200:
           description: OK
       tags:
-      - Catalog
-      - Info
+      - CatalogInfo
   /v2/catalog/list:
     get:
-      summary: Get V2 Catalog List
+      summary: ListCatalog
       description: |-
         Returns a list of [CatalogObject](#type-catalogobject)s that includes
         all objects of a set of desired types (for example, all [CatalogItem](#type-catalogitem)
         and [CatalogTax](#type-catalogtax) objects) in the catalog. The types parameter
         is specified as a comma-separated list of valid [CatalogObject](#type-catalogobject) types:
         `ITEM`, `ITEM_VARIATION`, `MODIFIER`, `MODIFIER_LIST`, `CATEGORY`, `DISCOUNT`, `TAX`.
-      operationId: getV2CatalogList
+      operationId: ListCatalog
       x-api-path-slug: v2cataloglist-get
       parameters:
       - in: query
@@ -141,19 +137,18 @@ paths:
         200:
           description: OK
       tags:
-      - Catalog
-      - List
+      - ListCatalog
 x-streamrank:
-  polling_total_time_average: 0
-  polling_size_download_average: 0
-  streaming_total_time_average: 0
-  streaming_size_download_average: 0
-  change_yes: 0
-  change_no: 0
-  time_percentage: 0
-  size_percentage: 0
-  change_percentage: 0
-  last_run: ""
-  days_run: 0
-  minute_run: 0
+  polling_total_time_average: "0"
+  polling_size_download_average: "0"
+  streaming_total_time_average: "0"
+  streaming_size_download_average: "0"
+  change_yes: "0"
+  change_no: "0"
+  time_percentage: "0"
+  size_percentage: "0"
+  change_percentage: "200"
+  last_run: ~
+  days_run: "0"
+  minute_run: "0"
 ---

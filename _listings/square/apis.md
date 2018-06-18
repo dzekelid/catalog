@@ -1,23 +1,19 @@
 ---
 name: Square
 x-slug: square
-description: Starting with a free credit card reader for the iPhone, iPad, and Android
-  devices, Square Reader allows anyone to accept credit cards anywhere, anytime, for
-  a low transaction rate of 2.75 percent per swipe, with no hidden fees. Square Register
-  serves as a full point-of-sale system for businesses to accept payments, manage
-  items, and share menu and location information. Square Wallet, available in the
-  US, is the most seamless way to pay, enabling individuals to pay at their favorite
-  local businesses, discover new ones nearby, explore menu listings, and store receipts.
-image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
+description: Square helps millions of sellers run their business- from secure credit
+  card processing to point of sale solutions. Get paid faster with Square and sign
+  up today!
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
 x-kinRank: "9"
-x-alexaRank: ""
+x-alexaRank: "2436"
 tags: Catalog
-created: "2018-05-20"
-modified: "2018-05-20"
+created: "2018-06-17"
+modified: "2018-06-17"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Square Connect API Post V2 Catalog Batch Delete
+- name: Square Connect API BatchDeleteCatalogObjects
   x-api-slug: square-connect-api
   description: |-
     Deletes a set of [CatalogItem](#type-catalogitem)s based on the
@@ -30,14 +26,14 @@ apis:
     `BatchDeleteCatalogObjects` succeeds even if only a portion of the targeted
     IDs can be deleted. The response will only include IDs that were
     actually deleted.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1///v2/catalog/batch-delete
-  tags: Catalog,Batch-delete
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+  humanURL: http://squareup.com
+  baseURL: https://connect.squareup.com////v2/catalog/batch-delete
+  tags: BatchCatalogObjects
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/v2catalogbatchdelete-post-openapi.md
-- name: Square Connect API Post V2 Catalog Batch Retrieve
+- name: Square Connect API BatchRetrieveCatalogObjects
   x-api-slug: square-connect-api
   description: |-
     Returns a set of objects based on the provided ID.
@@ -46,14 +42,14 @@ apis:
     [CatalogItemVariation](#type-catalogitemvariation) objects, references to
     its [CatalogModifierList](#type-catalogmodifierlist) objects, and the ids of
     any [CatalogTax](#type-catalogtax) objects that apply to it.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1///v2/catalog/batch-retrieve
-  tags: Catalog,Batch-retrieve
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+  humanURL: http://squareup.com
+  baseURL: https://connect.squareup.com////v2/catalog/batch-retrieve
+  tags: BatchRetrieveCatalogObjects
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/v2catalogbatchretrieve-post-openapi.md
-- name: Square Connect API Post V2 Catalog Batch Upsert
+- name: Square Connect API BatchUpsertCatalogObjects
   x-api-slug: square-connect-api
   description: |-
     Creates or updates up to 10,000 target objects based on the provided
@@ -65,26 +61,26 @@ apis:
     batches will be processed in order as long as the total object count for the
     request (items, variations, modifier lists, discounts, and taxes) is no more
     than 10,000.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1///v2/catalog/batch-upsert
-  tags: Catalog,Batch-upsert
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+  humanURL: http://squareup.com
+  baseURL: https://connect.squareup.com////v2/catalog/batch-upsert
+  tags: BatchUpsertCatalogObjects
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/v2catalogbatchupsert-post-openapi.md
-- name: Square Connect API Get V2 Catalog Info
+- name: Square Connect API CatalogInfo
   x-api-slug: square-connect-api
   description: |-
     Returns information about the Square Catalog API, such as batch size
     limits for `BatchUpsertCatalogObjects`.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1///v2/catalog/info
-  tags: Catalog,Info
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+  humanURL: http://squareup.com
+  baseURL: https://connect.squareup.com////v2/catalog/info
+  tags: CatalogInfo
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/v2cataloginfo-get-openapi.md
-- name: Square Connect API Get V2 Catalog List
+- name: Square Connect API ListCatalog
   x-api-slug: square-connect-api
   description: |-
     Returns a list of [CatalogObject](#type-catalogobject)s that includes
@@ -92,24 +88,24 @@ apis:
     and [CatalogTax](#type-catalogtax) objects) in the catalog. The types parameter
     is specified as a comma-separated list of valid [CatalogObject](#type-catalogobject) types:
     `ITEM`, `ITEM_VARIATION`, `MODIFIER`, `MODIFIER_LIST`, `CATEGORY`, `DISCOUNT`, `TAX`.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1///v2/catalog/list
-  tags: Catalog,List
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+  humanURL: http://squareup.com
+  baseURL: https://connect.squareup.com////v2/catalog/list
+  tags: ListCatalog
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/v2cataloglist-get-openapi.md
-- name: Square Connect API Post V2 Catalog Object
+- name: Square Connect API UpsertCatalogObject
   x-api-slug: square-connect-api
   description: Creates or updates the target [CatalogObject](#type-catalogobject).
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1///v2/catalog/object
-  tags: Catalog,Object
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+  humanURL: http://squareup.com
+  baseURL: https://connect.squareup.com////v2/catalog/object
+  tags: UpsertCatalogObject
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/v2catalogobject-post-openapi.md
-- name: Square Connect API Delete V2 Catalog Object Object
+- name: Square Connect API DeleteCatalogObject
   x-api-slug: square-connect-api
   description: |-
     Deletes a single [CatalogObject](#type-catalogobject) based on the
@@ -118,14 +114,14 @@ apis:
     are also deleted. For example, deleting a [CatalogItem](#type-catalogitem)
     will also delete all of its
     [CatalogItemVariation](#type-catalogitemvariation) children.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1///v2/catalog/object/{object_id}
-  tags: Catalog,Object,Object
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+  humanURL: http://squareup.com
+  baseURL: https://connect.squareup.com////v2/catalog/object/{object_id}
+  tags: CatalogObject
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/v2catalogobjectobject-id-delete-openapi.md
-- name: Square Connect API Get V2 Catalog Object Object
+- name: Square Connect API RetrieveCatalogObject
   x-api-slug: square-connect-api
   description: |-
     Returns a single [CatalogItem](#type-catalogitem) as a
@@ -135,69 +131,38 @@ apis:
     children, references to its
     [CatalogModifierList](#type-catalogmodifierlist) objects, and the ids of
     any [CatalogTax](#type-catalogtax) objects that apply to it.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1///v2/catalog/object/{object_id}
-  tags: Catalog,Object,Object
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+  humanURL: http://squareup.com
+  baseURL: https://connect.squareup.com////v2/catalog/object/{object_id}
+  tags: RetrieveCatalogObject
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/v2catalogobjectobject-id-get-openapi.md
-- name: Square Connect API Post V2 Catalog Search
+- name: Square Connect API SearchCatalogObjects
   x-api-slug: square-connect-api
   description: |-
-    Queries the targeted catalog using a variety of query types:
-    [CatalogQuerySortedAttribute](#type-catalogquerysortedattribute),
-    [CatalogQueryExact](#type-catalogqueryexact),
-    [CatalogQueryRange](#type-catalogqueryrange),
-    [CatalogQueryText](#type-catalogquerytext),
-    [CatalogQueryItemsForTax](#type-catalogqueryitemsfortax), and
-    [CatalogQueryItemsForModifierList](#type-catalogqueryitemsformodifierlist).
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1///v2/catalog/search
-  tags: Catalog,Search
+    Queries the targeted catalog using a variety of query types
+    ([CatalogQuerySortedAttribute](#type-catalogquerysortedattribute),
+    ([CatalogQueryExact](#type-catalogqueryexact),
+    ([CatalogQueryRange](#type-catalogqueryrange),
+    ([CatalogQueryText](#type-catalogquerytext),
+    ([CatalogQueryItemsForTax](#type-catalogqueryitemsfortax),
+    ([CatalogQueryItemsForModifierList](#type-catalogqueryitemsformodifierlist)).
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+  humanURL: http://squareup.com
+  baseURL: https://connect.squareup.com////v2/catalog/search
+  tags: SearchCatalogObjects
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/v2catalogsearch-post-openapi.md
-- name: Square Connect API Post V2 Catalog Update Item Modifier Lists
-  x-api-slug: square-connect-api
-  description: |-
-    Updates the [CatalogModifierList](#type-catalogmodifierlist) objects
-    that apply to the targeted [CatalogItem](#type-catalogitem) without having
-    to perform an upsert on the entire item.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1///v2/catalog/update-item-modifier-lists
-  tags: Catalog,Update-item-modifier-lists
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/v2catalogupdateitemmodifierlists-post-openapi.md
-- name: Square Connect API Post V2 Catalog Update Item Taxes
-  x-api-slug: square-connect-api
-  description: |-
-    Updates the [CatalogTax](#type-catalogtax) objects that apply to the
-    targeted [CatalogItem](#type-catalogitem) without having to perform an
-    upsert on the entire item.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1///v2/catalog/update-item-taxes
-  tags: Catalog,Update-item-taxes
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/square/v2catalogupdateitemtaxes-post-openapi.md
 - name: Square Connect API
   x-api-slug: square-connect-api
-  description: Starting with a free credit card reader for the iPhone, iPad, and Android
-    devices, Square Reader allows anyone to accept credit cards anywhere, anytime,
-    for a low transaction rate of 2.75 percent per swipe, with no hidden fees. Square
-    Register serves as a full point-of-sale system for businesses to accept payments,
-    manage items, and share menu and location information. Square Wallet, available
-    in the US, is the most seamless way to pay, enabling individuals to pay at their
-    favorite local businesses, discover new ones nearby, explore menu listings, and
-    store receipts.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/square-logo.png
-  humanURL: https://squareup.com
-  baseURL: https://connect.squareup.com/v1/
+  description: Square helps millions of sellers run their business- from secure credit
+    card processing to point of sale solutions. Get paid faster with Square and sign
+    up today!
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/2176-square.jpg
+  humanURL: http://squareup.com
+  baseURL: https://connect.squareup.com//
   tags: Catalog
   properties:
   - type: x-openapi-spec
@@ -207,12 +172,34 @@ x-common:
   url: https://connect.squareup.com
 - type: x-crunchbase
   url: http://www.crunchbase.com/company/square
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/square
 - type: x-developer
   url: https://connect.squareup.com/
+- type: x-email
+  url: press@squareup.com
+- type: x-email
+  url: security@squareup.com
+- type: x-email
+  url: lawenforcement@squareup.com
+- type: x-email
+  url: redemption@squareup.com
+- type: x-email
+  url: privacy@squareup.com
+- type: x-email
+  url: community@squareup.com
+- type: x-email
+  url: noreply@messaging.squareup.com
+- type: x-email
+  url: ir@squareup.com
+- type: x-email
+  url: takedowns@squareup.com
 - type: x-github
   url: https://github.com/square
 - type: x-twitter
   url: https://twitter.com/Square
+- type: x-website
+  url: http://squareup.com
 - type: x-website
   url: https://squareup.com
 include: []

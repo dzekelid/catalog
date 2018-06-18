@@ -15,10 +15,10 @@ description: The Data Lake analytics service is a new distributed analytics serv
   Azure SQL Data Warehouse.
 image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-lake-analytics-05.png
 x-kinRank: "10"
-x-alexaRank: ""
+x-alexaRank: "0"
 tags: Catalog
-created: "2018-05-20"
-modified: "2018-05-20"
+created: "2018-06-17"
+modified: "2018-06-17"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/catalog/master/_listings/azure-data-lake-analytics/apis.md
 specificationVersion: "0.14"
 apis:

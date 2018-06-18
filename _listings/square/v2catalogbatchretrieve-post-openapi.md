@@ -3,7 +3,7 @@ swagger: "2.0"
 x-collection-name: Square
 x-complete: 0
 info:
-  title: Square Connect API Post V2 Catalog Batch Retrieve
+  title: Square Connect API BatchRetrieveCatalogObjects
   description: |-
     Returns a set of objects based on the provided ID.
     Each [CatalogItem](#type-catalogitem) returned in the set includes all of its
@@ -16,9 +16,9 @@ info:
     name: Square Developer Platform
     url: https://squareup.com/developers
     email: developers@squareup.com
-  version: 1.0.0
+  version: "2.0"
 host: connect.squareup.com
-basePath: v1/
+basePath: /
 schemes:
 - http
 produces:
@@ -28,7 +28,7 @@ consumes:
 paths:
   /v2/catalog/batch-delete:
     post:
-      summary: Post V2 Catalog Batch Delete
+      summary: BatchDeleteCatalogObjects
       description: |-
         Deletes a set of [CatalogItem](#type-catalogitem)s based on the
         provided list of target IDs and returns a set of successfully deleted IDs in
@@ -40,7 +40,7 @@ paths:
         `BatchDeleteCatalogObjects` succeeds even if only a portion of the targeted
         IDs can be deleted. The response will only include IDs that were
         actually deleted.
-      operationId: postV2CatalogBatchDelete
+      operationId: BatchDeleteCatalogObjects
       x-api-path-slug: v2catalogbatchdelete-post
       parameters:
       - in: body
@@ -52,11 +52,10 @@ paths:
         200:
           description: OK
       tags:
-      - Catalog
-      - Batch-delete
+      - BatchCatalogObjects
   /v2/catalog/batch-retrieve:
     post:
-      summary: Post V2 Catalog Batch Retrieve
+      summary: BatchRetrieveCatalogObjects
       description: |-
         Returns a set of objects based on the provided ID.
         Each [CatalogItem](#type-catalogitem) returned in the set includes all of its
@@ -64,7 +63,7 @@ paths:
         [CatalogItemVariation](#type-catalogitemvariation) objects, references to
         its [CatalogModifierList](#type-catalogmodifierlist) objects, and the ids of
         any [CatalogTax](#type-catalogtax) objects that apply to it.
-      operationId: postV2CatalogBatchRetrieve
+      operationId: BatchRetrieveCatalogObjects
       x-api-path-slug: v2catalogbatchretrieve-post
       parameters:
       - in: body
@@ -76,8 +75,7 @@ paths:
         200:
           description: OK
       tags:
-      - Catalog
-      - Batch-retrieve
+      - BatchRetrieveCatalogObjects
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

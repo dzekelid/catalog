@@ -4,7 +4,7 @@ x-collection-name: Azure Data Lake Analytics
 x-complete: 1
 info:
   title: DataLakeAnalyticsJobManagementClient
-  description: creates-an-azure-data-lake-analytics-job-client
+  description: creates-an-azure-data-lake-analytics-job-client-
   version: 1.0.0
 basePath: /
 schemes:
